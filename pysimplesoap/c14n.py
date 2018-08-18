@@ -426,7 +426,7 @@ def Canonicalize(node, output=None, **kw):
                 prefixes that should be inherited.
     '''
     if output:
-        _implementation(*((node, output.write), kw))
+        _implementation(*(node, output.write), **kw)
     else:
         s = StringIO.StringIO()
         _implementation(*((node, s.write), kw))
