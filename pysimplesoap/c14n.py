@@ -59,7 +59,7 @@ try:
     import cStringIO
     StringIO = cStringIO
 except ImportError:
-    import StringIO
+    from io import StringIO
 
 _attrs = lambda E: (E.attributes and E.attributes.values()) or []
 _children = lambda E: E.childNodes or []
